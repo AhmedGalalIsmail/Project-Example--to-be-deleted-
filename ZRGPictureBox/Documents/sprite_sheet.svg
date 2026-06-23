@@ -1,0 +1,649 @@
+<svg width="1400" height="2000" viewBox="0 0 1400 2000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .cell-bg { fill: #252526; stroke: #333; stroke-width: 1; }
+      .cell-bg.active { fill: #2d2017; stroke: #e07b39; }
+      .icon-stroke { fill: none; stroke: #d4d4d4; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+      .icon-stroke-accent { fill: none; stroke: #e07b39; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+      .icon-fill { fill: #d4d4d4; }
+      .icon-fill-accent { fill: #e07b39; }
+      .label { fill: #999; font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; text-anchor: middle; }
+      .label-accent { fill: #e07b39; font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; text-anchor: middle; font-weight: 600; }
+      .section-title { fill: #e07b39; font-family: 'Segoe UI', Arial, sans-serif; font-size: 16px; font-weight: 700; }
+      .section-sub { fill: #777; font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; }
+      .swatch-label { fill: #888; font-family: 'Segoe UI', Arial, sans-serif; font-size: 10px; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1400" height="2000"/>
+
+  <!-- ============ HEADER ============ -->
+  <text x="30" y="36" class="section-title" font-size="22">CoNSoL-TakeOff &#8212; Icon Reference Sheet</text>
+  <text x="30" y="58" class="section-sub">Flat line-icon set, single 1.8px stroke, dark-theme palette. Accent color #e07b39 marks "active" state.</text>
+  <line x1="30" y1="70" x2="1370" y2="70" stroke="#333" stroke-width="1"/>
+
+  <!-- ============ ROW LABEL HELPER (drawn per section) ============ -->
+
+  <!-- ================= SECTION 1: DRAWING TOOLS ================= -->
+  <text x="30" y="100" class="section-title">Drawing Tools</text>
+
+  <!-- Cell template: 110x130, 10 cols -->
+  <!-- Col positions start x=30, step 132 -->
+
+  <!-- 1. Select (cursor arrow) -->
+  <g transform="translate(30,115)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <path class="icon-stroke" d="M -14,-16 L 12,4 L 0,6 L 8,18 L 2,22 L -6,10 L -14,18 Z"/>
+    </g>
+    <text x="55" y="95" class="label">Select</text>
+  </g>
+
+  <!-- 2. Line tool (active/accent) -->
+  <g transform="translate(162,115)">
+    <rect class="cell-bg active" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <line class="icon-stroke-accent" x1="-16" y1="14" x2="16" y2="-14"/>
+      <circle class="icon-fill-accent" cx="-16" cy="14" r="2.5"/>
+      <circle class="icon-fill-accent" cx="16" cy="-14" r="2.5"/>
+    </g>
+    <text x="55" y="95" class="label-accent">Line (active)</text>
+  </g>
+
+  <!-- 3. Rectangle -->
+  <g transform="translate(294,115)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <rect class="icon-stroke" x="33" y="34" width="44" height="32"/>
+    <text x="55" y="95" class="label">Rectangle</text>
+  </g>
+
+  <!-- 4. Circle -->
+  <g transform="translate(426,115)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <circle class="icon-stroke" cx="55" cy="50" r="18"/>
+    <text x="55" y="95" class="label">Circle</text>
+  </g>
+
+  <!-- 5. Ellipse -->
+  <g transform="translate(558,115)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <ellipse class="icon-stroke" cx="55" cy="50" rx="22" ry="13"/>
+    <text x="55" y="95" class="label">Ellipse</text>
+  </g>
+
+  <!-- 6. Polyline -->
+  <g transform="translate(690,115)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <polyline class="icon-stroke" points="33,62 47,38 63,55 77,32"/>
+    <circle class="icon-fill" cx="33" cy="62" r="2"/>
+    <circle class="icon-fill" cx="47" cy="38" r="2"/>
+    <circle class="icon-fill" cx="63" cy="55" r="2"/>
+    <circle class="icon-fill" cx="77" cy="32" r="2"/>
+    <text x="55" y="95" class="label">Polyline</text>
+  </g>
+
+  <!-- 7. Text -->
+  <g transform="translate(822,115)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <line class="icon-stroke" x1="-14" y1="-16" x2="14" y2="-16"/>
+      <line class="icon-stroke" x1="0" y1="-16" x2="0" y2="16"/>
+      <line class="icon-stroke" x1="-7" y1="16" x2="7" y2="16"/>
+    </g>
+    <text x="55" y="95" class="label">Text</text>
+  </g>
+
+  <!-- 8. Dimension -->
+  <g transform="translate(954,115)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <line class="icon-stroke" x1="-20" y1="0" x2="20" y2="0"/>
+      <polyline class="icon-stroke" points="-14,-6 -20,0 -14,6"/>
+      <polyline class="icon-stroke" points="14,-6 20,0 14,6"/>
+      <line class="icon-stroke" x1="-20" y1="-8" x2="-20" y2="8"/>
+      <line class="icon-stroke" x1="20" y1="-8" x2="20" y2="8"/>
+    </g>
+    <text x="55" y="95" class="label">Dimension</text>
+  </g>
+
+  <!-- 9. Symbol (insert block) -->
+  <g transform="translate(1086,115)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <circle class="icon-stroke" cx="0" cy="0" r="16"/>
+      <line class="icon-stroke" x1="0" y1="-9" x2="0" y2="9"/>
+      <line class="icon-stroke" x1="-9" y1="0" x2="9" y2="0"/>
+    </g>
+    <text x="55" y="95" class="label">Symbol</text>
+  </g>
+
+  <!-- 10. Pan -->
+  <g transform="translate(1218,115)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <line class="icon-stroke" x1="0" y1="-18" x2="0" y2="18"/>
+      <line class="icon-stroke" x1="-18" y1="0" x2="18" y2="0"/>
+      <polyline class="icon-stroke" points="-5,-13 0,-18 5,-13"/>
+      <polyline class="icon-stroke" points="-5,13 0,18 5,13"/>
+      <polyline class="icon-stroke" points="-13,-5 -18,0 -13,5"/>
+      <polyline class="icon-stroke" points="13,-5 18,0 13,5"/>
+    </g>
+    <text x="55" y="95" class="label">Pan</text>
+  </g>
+
+  <!-- ================= SECTION 2: FILE & VIEW ================= -->
+  <text x="30" y="270" class="section-title">File &amp; View Operations</text>
+
+  <!-- 1. New file -->
+  <g transform="translate(30,285)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <path class="icon-stroke" d="M -14,-20 L 4,-20 L 14,-10 L 14,20 L -14,20 Z"/>
+      <polyline class="icon-stroke" points="4,-20 4,-10 14,-10"/>
+      <line class="icon-stroke" x1="-6" y1="6" x2="6" y2="6"/>
+      <line class="icon-stroke" x1="0" y1="0" x2="0" y2="12"/>
+    </g>
+    <text x="55" y="95" class="label">New</text>
+  </g>
+
+  <!-- 2. Open folder -->
+  <g transform="translate(162,285)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,52)">
+      <path class="icon-stroke" d="M -18,-10 L -18,14 L 18,14 L 14,-2 L 0,-2 L -4,-10 Z"/>
+    </g>
+    <text x="55" y="95" class="label">Open</text>
+  </g>
+
+  <!-- 3. Save -->
+  <g transform="translate(294,285)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <path class="icon-stroke" d="M -16,-16 L 10,-16 L 16,-10 L 16,16 L -16,16 Z"/>
+      <rect class="icon-stroke" x="-9" y="-16" width="12" height="9"/>
+      <rect class="icon-stroke" x="-9" y="3" width="18" height="13"/>
+    </g>
+    <text x="55" y="95" class="label">Save</text>
+  </g>
+
+  <!-- 4. Zoom in -->
+  <g transform="translate(426,285)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(50,46)">
+      <circle class="icon-stroke" cx="0" cy="0" r="14"/>
+      <line class="icon-stroke" x1="10" y1="10" x2="20" y2="20"/>
+      <line class="icon-stroke" x1="-5" y1="0" x2="5" y2="0"/>
+      <line class="icon-stroke" x1="0" y1="-5" x2="0" y2="5"/>
+    </g>
+    <text x="55" y="95" class="label">Zoom In</text>
+  </g>
+
+  <!-- 5. Zoom out -->
+  <g transform="translate(558,285)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(50,46)">
+      <circle class="icon-stroke" cx="0" cy="0" r="14"/>
+      <line class="icon-stroke" x1="10" y1="10" x2="20" y2="20"/>
+      <line class="icon-stroke" x1="-5" y1="0" x2="5" y2="0"/>
+    </g>
+    <text x="55" y="95" class="label">Zoom Out</text>
+  </g>
+
+  <!-- 6. Fit to window -->
+  <g transform="translate(690,285)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <polyline class="icon-stroke" points="-18,-8 -18,-18 -8,-18"/>
+      <polyline class="icon-stroke" points="8,-18 18,-18 18,-8"/>
+      <polyline class="icon-stroke" points="18,8 18,18 8,18"/>
+      <polyline class="icon-stroke" points="-8,18 -18,18 -18,8"/>
+    </g>
+    <text x="55" y="95" class="label">Fit Window</text>
+  </g>
+
+  <!-- 7. Undo -->
+  <g transform="translate(822,285)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <path class="icon-stroke" d="M -14,0 A 16,16 0 1 1 -4,16"/>
+      <polyline class="icon-stroke" points="-7,-9 -14,0 -3,4"/>
+    </g>
+    <text x="55" y="95" class="label">Undo</text>
+  </g>
+
+  <!-- 8. Redo -->
+  <g transform="translate(954,285)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <path class="icon-stroke" d="M 14,0 A 16,16 0 1 0 4,16"/>
+      <polyline class="icon-stroke" points="7,-9 14,0 3,4"/>
+    </g>
+    <text x="55" y="95" class="label">Redo</text>
+  </g>
+
+  <!-- 9. Export / download -->
+  <g transform="translate(1086,285)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <line class="icon-stroke" x1="0" y1="-16" x2="0" y2="10"/>
+      <polyline class="icon-stroke" points="-8,2 0,10 8,2"/>
+      <line class="icon-stroke" x1="-16" y1="16" x2="16" y2="16"/>
+    </g>
+    <text x="55" y="95" class="label">Export</text>
+  </g>
+
+  <!-- 10. Take-off / Sum (accent) -->
+  <g transform="translate(1218,285)">
+    <rect class="cell-bg active" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <path class="icon-stroke-accent" d="M -13,-16 L 13,-16 L 13,-10 L -2,-2 L 13,8 L 13,16 L -13,16 L -13,10 L 1,2 L -13,-8 Z"/>
+    </g>
+    <text x="55" y="95" class="label-accent">Take-Off (&#931;)</text>
+  </g>
+
+  <!-- ================= SECTION 3: LAYERS & TAGS ================= -->
+  <text x="30" y="440" class="section-title">Layers, Tags &amp; Visibility</text>
+
+  <!-- 1. Layer list -->
+  <g transform="translate(30,455)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <polygon class="icon-stroke" points="0,-16 18,-6 0,4 -18,-6"/>
+      <polyline class="icon-stroke" points="-18,3 0,13 18,3"/>
+      <polyline class="icon-stroke" points="-18,12 0,22 18,12"/>
+    </g>
+    <text x="55" y="95" class="label">Layers</text>
+  </g>
+
+  <!-- 2. Eye (visible) -->
+  <g transform="translate(162,455)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <path class="icon-stroke" d="M -18,0 C -10,-14 10,-14 18,0 C 10,14 -10,14 -18,0 Z"/>
+      <circle class="icon-stroke" cx="0" cy="0" r="5"/>
+    </g>
+    <text x="55" y="95" class="label">Visible</text>
+  </g>
+
+  <!-- 3. Eye off (hidden) -->
+  <g transform="translate(294,455)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <path class="icon-stroke" d="M -18,0 C -10,-14 10,-14 18,0 C 10,14 -10,14 -18,0 Z"/>
+      <circle class="icon-stroke" cx="0" cy="0" r="5"/>
+      <line class="icon-stroke" x1="-20" y1="-16" x2="20" y2="16"/>
+    </g>
+    <text x="55" y="95" class="label">Hidden</text>
+  </g>
+
+  <!-- 4. Lock (closed) -->
+  <g transform="translate(426,455)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <rect class="icon-stroke" x="-12" y="0" width="24" height="18" rx="2"/>
+      <path class="icon-stroke" d="M -8,0 L -8,-8 A 8,8 0 0 1 8,-8 L 8,0"/>
+    </g>
+    <text x="55" y="95" class="label">Locked</text>
+  </g>
+
+  <!-- 5. Lock (open) -->
+  <g transform="translate(558,455)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <rect class="icon-stroke" x="-12" y="0" width="24" height="18" rx="2"/>
+      <path class="icon-stroke" d="M -8,0 L -8,-8 A 8,8 0 0 1 8,-8 L 8,-4"/>
+    </g>
+    <text x="55" y="95" class="label">Unlocked</text>
+  </g>
+
+  <!-- 6. Printer -->
+  <g transform="translate(690,455)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <rect class="icon-stroke" x="-14" y="-4" width="28" height="14" rx="2"/>
+      <polyline class="icon-stroke" points="-9,-4 -9,-16 9,-16 9,-4"/>
+      <rect class="icon-stroke" x="-9" y="10" width="18" height="10"/>
+    </g>
+    <text x="55" y="95" class="label">Print</text>
+  </g>
+
+  <!-- 7. Tag -->
+  <g transform="translate(822,455)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(53,50)">
+      <path class="icon-stroke" d="M -14,-14 L 4,-14 L 18,0 L 4,14 L -14,14 Z"/>
+      <circle class="icon-fill" cx="-5" cy="0" r="2.2"/>
+    </g>
+    <text x="55" y="95" class="label">Smart Tag</text>
+  </g>
+
+  <!-- 8. Add (plus) -->
+  <g transform="translate(954,455)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <line class="icon-stroke" x1="0" y1="-16" x2="0" y2="16"/>
+      <line class="icon-stroke" x1="-16" y1="0" x2="16" y2="0"/>
+    </g>
+    <text x="55" y="95" class="label">Add</text>
+  </g>
+
+  <!-- 9. Remove (minus) -->
+  <g transform="translate(1086,455)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <line class="icon-stroke" x1="-16" y1="0" x2="16" y2="0"/>
+    </g>
+    <text x="55" y="95" class="label">Remove</text>
+  </g>
+
+  <!-- 10. Settings/gear -->
+  <g transform="translate(1218,455)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <circle class="icon-stroke" cx="0" cy="0" r="6"/>
+      <g class="icon-stroke">
+        <line x1="0" y1="-18" x2="0" y2="-12"/>
+        <line x1="0" y1="12" x2="0" y2="18"/>
+        <line x1="-18" y1="0" x2="-12" y2="0"/>
+        <line x1="12" y1="0" x2="18" y2="0"/>
+        <line x1="-13" y1="-13" x2="-9" y2="-9"/>
+        <line x1="9" y1="9" x2="13" y2="13"/>
+        <line x1="13" y1="-13" x2="9" y2="-9"/>
+        <line x1="-9" y1="9" x2="-13" y2="13"/>
+      </g>
+    </g>
+    <text x="55" y="95" class="label">Settings</text>
+  </g>
+
+  <!-- ================= SECTION 4: MATERIALS / BLOCKS TREE ================= -->
+  <text x="30" y="610" class="section-title">Materials &amp; Block Tree</text>
+
+  <!-- 1. Block (brick) -->
+  <g transform="translate(30,625)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <rect class="icon-stroke" x="-18" y="-14" width="16" height="10"/>
+      <rect class="icon-stroke" x="2" y="-14" width="16" height="10"/>
+      <rect class="icon-stroke" x="-10" y="-4" width="16" height="10"/>
+      <rect class="icon-stroke" x="-18" y="6" width="16" height="10"/>
+      <rect class="icon-stroke" x="2" y="6" width="16" height="10"/>
+    </g>
+    <text x="55" y="95" class="label">Block</text>
+  </g>
+
+  <!-- 2. Material (generic - circle outline) -->
+  <g transform="translate(162,625)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <circle class="icon-stroke" cx="0" cy="0" r="16"/>
+      <circle class="icon-fill" cx="0" cy="0" r="6"/>
+    </g>
+    <text x="55" y="95" class="label">Material</text>
+  </g>
+
+  <!-- 3. Door -->
+  <g transform="translate(294,625)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,52)">
+      <rect class="icon-stroke" x="-12" y="-20" width="24" height="36" rx="1"/>
+      <circle class="icon-fill" cx="6" cy="-2" r="1.8"/>
+    </g>
+    <text x="55" y="95" class="label">Door</text>
+  </g>
+
+  <!-- 4. Wrench (rebar/hardware) -->
+  <g transform="translate(426,625)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <path class="icon-stroke" d="M -10,14 L 6,-2 A 9,9 0 1 0 10,-6 L -6,10 Z"/>
+    </g>
+    <text x="55" y="95" class="label">Rebar/Hardware</text>
+  </g>
+
+  <!-- 5. Tile / Panel -->
+  <g transform="translate(558,625)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <rect class="icon-stroke" x="37" y="34" width="36" height="32" rx="2"/>
+    <line class="icon-stroke" x1="37" y1="50" x2="73" y2="50"/>
+    <text x="55" y="95" class="label">Tile / Panel</text>
+  </g>
+
+  <!-- 6. Glass -->
+  <g transform="translate(690,625)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <rect class="icon-stroke" x="-16" y="-16" width="32" height="32" rx="2"/>
+      <line class="icon-stroke" x1="-16" y1="16" x2="16" y2="-16" stroke-width="1.2" opacity="0.5"/>
+    </g>
+    <text x="55" y="95" class="label">Glass</text>
+  </g>
+
+  <!-- 7. Tree expand chevron -->
+  <g transform="translate(822,625)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <polyline class="icon-stroke" points="46,38 64,50 46,62"/>
+    <text x="55" y="95" class="label">Collapsed</text>
+  </g>
+
+  <!-- 8. Tree collapse chevron -->
+  <g transform="translate(954,625)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <polyline class="icon-stroke" points="38,44 50,58 62,44"/>
+    <text x="55" y="95" class="label">Expanded</text>
+  </g>
+
+  <!-- 9. Search -->
+  <g transform="translate(1086,625)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(50,46)">
+      <circle class="icon-stroke" cx="0" cy="0" r="13"/>
+      <line class="icon-stroke" x1="9" y1="9" x2="19" y2="19"/>
+    </g>
+    <text x="55" y="95" class="label">Search</text>
+  </g>
+
+  <!-- 10. Checkmark -->
+  <g transform="translate(1218,625)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <polyline class="icon-stroke-accent" points="38,50 49,61 73,38"/>
+    <text x="55" y="95" class="label-accent">Confirm</text>
+  </g>
+
+  <!-- ================= SECTION 5: GENERAL UI ================= -->
+  <text x="30" y="780" class="section-title">General UI Actions</text>
+
+  <!-- 1. Close X -->
+  <g transform="translate(30,795)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <line class="icon-stroke" x1="-14" y1="-14" x2="14" y2="14"/>
+      <line class="icon-stroke" x1="14" y1="-14" x2="-14" y2="14"/>
+    </g>
+    <text x="55" y="95" class="label">Close</text>
+  </g>
+
+  <!-- 2. Delete / Trash -->
+  <g transform="translate(162,795)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,52)">
+      <polyline class="icon-stroke" points="-12,-12 -12,16 12,16 12,-12"/>
+      <line class="icon-stroke" x1="-16" y1="-12" x2="16" y2="-12"/>
+      <line class="icon-stroke" x1="-5" y1="-12" x2="-5" y2="-18"/>
+      <line class="icon-stroke" x1="5" y1="-12" x2="5" y2="-18"/>
+      <line class="icon-stroke" x1="-5" y1="-18" x2="5" y2="-18"/>
+      <line class="icon-stroke" x1="0" y1="-4" x2="0" y2="10"/>
+    </g>
+    <text x="55" y="95" class="label">Delete</text>
+  </g>
+
+  <!-- 3. Import -->
+  <g transform="translate(294,795)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <line class="icon-stroke" x1="0" y1="16" x2="0" y2="-10"/>
+      <polyline class="icon-stroke" points="-8,-2 0,-10 8,-2"/>
+      <line class="icon-stroke" x1="-16" y1="16" x2="16" y2="16"/>
+    </g>
+    <text x="55" y="95" class="label">Import</text>
+  </g>
+
+  <!-- 4. Edit / pencil -->
+  <g transform="translate(426,795)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,52)">
+      <path class="icon-stroke" d="M -14,14 L -16,18 L -12,16 L 10,-6 L 6,-10 Z"/>
+      <line class="icon-stroke" x1="2" y1="-14" x2="14" y2="-2"/>
+    </g>
+    <text x="55" y="95" class="label">Edit</text>
+  </g>
+
+  <!-- 5. Calculator/sum -->
+  <g transform="translate(558,795)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <rect class="icon-stroke" x="-14" y="-18" width="28" height="36" rx="2"/>
+      <line class="icon-stroke" x1="-9" y1="-10" x2="9" y2="-10"/>
+      <line class="icon-stroke" x1="-9" y1="0" x2="-3" y2="0"/>
+      <line class="icon-stroke" x1="3" y1="0" x2="9" y2="0"/>
+      <line class="icon-stroke" x1="-9" y1="8" x2="-3" y2="8"/>
+      <line class="icon-stroke" x1="3" y1="8" x2="9" y2="8"/>
+    </g>
+    <text x="55" y="95" class="label">Calculate</text>
+  </g>
+
+  <!-- 6. Filter / funnel -->
+  <g transform="translate(690,795)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <path class="icon-stroke" d="M -16,-12 L 16,-12 L 4,4 L 4,16 L -4,12 L -4,4 Z"/>
+    </g>
+    <text x="55" y="95" class="label">Filter</text>
+  </g>
+
+  <!-- 7. Info -->
+  <g transform="translate(822,795)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <circle class="icon-stroke" cx="0" cy="0" r="16"/>
+      <line class="icon-stroke" x1="0" y1="-2" x2="0" y2="9"/>
+      <circle class="icon-fill" cx="0" cy="-8" r="1.6"/>
+    </g>
+    <text x="55" y="95" class="label">Info</text>
+  </g>
+
+  <!-- 8. Warning -->
+  <g transform="translate(954,795)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,52)">
+      <path class="icon-stroke" d="M 0,-18 L 17,14 L -17,14 Z"/>
+      <line class="icon-stroke" x1="0" y1="-6" x2="0" y2="4"/>
+      <circle class="icon-fill" cx="0" cy="9" r="1.6"/>
+    </g>
+    <text x="55" y="95" class="label">Warning</text>
+  </g>
+
+  <!-- 9. Drag handle -->
+  <g transform="translate(1086,795)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <circle class="icon-fill" cx="-6" cy="-10" r="2"/>
+      <circle class="icon-fill" cx="6" cy="-10" r="2"/>
+      <circle class="icon-fill" cx="-6" cy="0" r="2"/>
+      <circle class="icon-fill" cx="6" cy="0" r="2"/>
+      <circle class="icon-fill" cx="-6" cy="10" r="2"/>
+      <circle class="icon-fill" cx="6" cy="10" r="2"/>
+    </g>
+    <text x="55" y="95" class="label">Drag Handle</text>
+  </g>
+
+  <!-- 10. Minimize / maximize / close window controls -->
+  <g transform="translate(1218,795)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <g transform="translate(55,50)">
+      <line class="icon-stroke" x1="-10" y1="14" x2="10" y2="14"/>
+      <rect class="icon-stroke" x="-8" y="-14" width="16" height="14"/>
+    </g>
+    <text x="55" y="95" class="label">Window Ctrl</text>
+  </g>
+
+  <!-- ================= SECTION 6: MATERIAL COLOR SWATCHES (reference, not icons) ================= -->
+  <text x="30" y="950" class="section-title">Material Color Swatches (data reference, not icons)</text>
+  <text x="30" y="970" class="section-sub">These are color-coded dots used in the Material/Block tree to distinguish substances at a glance &#8212; replace freely.</text>
+
+  <g transform="translate(30,985)">
+    <rect class="cell-bg" width="110" height="90" rx="8"/>
+    <circle cx="55" cy="38" r="16" fill="#aaaaaa" stroke="#666" stroke-width="1"/>
+    <text x="55" y="75" class="swatch-label">Cement</text>
+  </g>
+  <g transform="translate(162,985)">
+    <rect class="cell-bg" width="110" height="90" rx="8"/>
+    <circle cx="55" cy="38" r="16" fill="#c2a878" stroke="#9c8762" stroke-width="1"/>
+    <text x="55" y="75" class="swatch-label">Sand</text>
+  </g>
+  <g transform="translate(294,985)">
+    <rect class="cell-bg" width="110" height="90" rx="8"/>
+    <circle cx="55" cy="38" r="16" fill="#555555" stroke="#333" stroke-width="1"/>
+    <text x="55" y="75" class="swatch-label">Stone</text>
+  </g>
+  <g transform="translate(426,985)">
+    <rect class="cell-bg" width="110" height="90" rx="8"/>
+    <circle cx="55" cy="38" r="16" fill="#4e8cff" stroke="#2d6fe0" stroke-width="1"/>
+    <text x="55" y="75" class="swatch-label">Water</text>
+  </g>
+  <g transform="translate(558,985)">
+    <rect class="cell-bg" width="110" height="90" rx="8"/>
+    <circle cx="55" cy="38" r="16" fill="#8B6914" stroke="#5a4310" stroke-width="1"/>
+    <text x="55" y="75" class="swatch-label">Wood</text>
+  </g>
+  <g transform="translate(690,985)">
+    <rect class="cell-bg" width="110" height="90" rx="8"/>
+    <circle cx="55" cy="38" r="16" fill="#c79a4a" stroke="#9c772f" stroke-width="1"/>
+    <text x="55" y="75" class="swatch-label">Steel</text>
+  </g>
+  <g transform="translate(822,985)">
+    <rect class="cell-bg" width="110" height="90" rx="8"/>
+    <circle cx="55" cy="38" r="16" fill="#4ec9b0" stroke="#34a085" stroke-width="1"/>
+    <text x="55" y="75" class="swatch-label">Tag / OK</text>
+  </g>
+  <g transform="translate(954,985)">
+    <rect class="cell-bg" width="110" height="90" rx="8"/>
+    <circle cx="55" cy="38" r="16" fill="#e07b39" stroke="#b85f29" stroke-width="1"/>
+    <text x="55" y="75" class="swatch-label">Accent</text>
+  </g>
+
+  <!-- ================= SECTION 7: STATE VARIANTS DEMO ================= -->
+  <text x="30" y="1120" class="section-title">Icon State Variants (default / hover / active)</text>
+  <text x="30" y="1140" class="section-sub">Example using the Rectangle tool icon &#8212; apply the same 3-state pattern to any icon above.</text>
+
+  <!-- Default -->
+  <g transform="translate(30,1155)">
+    <rect class="cell-bg" width="110" height="110" rx="8"/>
+    <rect class="icon-stroke" x="33" y="34" width="44" height="32"/>
+    <text x="55" y="95" class="label">Default</text>
+  </g>
+  <!-- Hover -->
+  <g transform="translate(162,1155)">
+    <rect width="110" height="110" rx="8" fill="#3d3d3d" stroke="#555" stroke-width="1"/>
+    <rect x="33" y="34" width="44" height="32" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="55" y="95" class="label">Hover</text>
+  </g>
+  <!-- Active/Selected -->
+  <g transform="translate(294,1155)">
+    <rect width="110" height="110" rx="8" fill="#e07b39" stroke="#e07b39" stroke-width="1"/>
+    <rect x="33" y="34" width="44" height="32" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="55" y="95" class="label">Active</text>
+  </g>
+  <!-- Disabled -->
+  <g transform="translate(426,1155)">
+    <rect class="cell-bg" width="110" height="110" rx="8" opacity="0.6"/>
+    <rect x="33" y="34" width="44" height="32" fill="none" stroke="#555" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="55" y="95" class="label" fill="#555">Disabled</text>
+  </g>
+
+  <!-- Footer note -->
+  <line x1="30" y1="1300" x2="1370" y2="1300" stroke="#333" stroke-width="1"/>
+  <text x="30" y="1325" class="section-sub">Grid cells: 110&#215;110px icon tiles, 22px gutter, 132px pitch. Stroke weight: 1.8px @ 100% scale &#8212; crop along cell backgrounds for clean tiles.</text>
+  <text x="30" y="1345" class="section-sub">All icons placeholder/reference only &#8212; swap for your own icon set (e.g. Lucide, Feather, custom SVGs) at any time; layout/sizing will remain compatible.</text>
+
+</svg>

@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>ZRGPictureBox</RootNamespace>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Documents\consoletakeoff_main_ui_mockup.html" />
+    <Content Include="Documents\material_block_crud_form_mockup.html" />
+    <Content Include="Documents\sprite_sheet.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Cursors\Edit.png" />
+    <EmbeddedResource Include="Cursors\Zoom-32.png" />
+    <EmbeddedResource Include="Resources\Rulers\Rulers.RulerOrigin.png" />
+    <EmbeddedResource Include="Resources\Rulers\Rulers.RulerOriginSnap.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CoordinatesBox.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Cursors\CrossCursor.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Rulers.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="SelectionBoxElement.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ZoomButton.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ZRGPictureBoxControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>
