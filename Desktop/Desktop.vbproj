@@ -1,0 +1,80 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<StartupObject>Desktop.program</StartupObject>
+		<UseWindowsForms>true</UseWindowsForms>
+		<MyType>WindowsForms</MyType>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="My Project\Application.Designer.vb" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="My Project\Application.myapp" />
+	</ItemGroup>
+
+	
+	<!--
+	<ItemGroup>
+		<Compile Remove="ApplicationEvents.vb" />
+		<Compile Remove="Forms\MainForm.Designer.vb" />
+		<Compile Remove="My Project\Application.Designer.vb" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="My Project\Application.myapp" />
+	</ItemGroup>
+
+ <ItemGroup>
+		<Page Remove="Forms\WPFMainForm.xaml" />
+	</ItemGroup>
+	-->
+
+	<ItemGroup>
+		<Import Include="System.Data" />
+		<Import Include="System.Drawing" />
+		<Import Include="System.Windows.Forms" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Application\Application.vbproj" />
+		<ProjectReference Include="..\Domain\Domain.vbproj" />
+		<ProjectReference Include="..\Infrastructure\Infrastructure.vbproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Assets\Icons\01-File-and-View\01-Not-Selected\" />
+		<Folder Include="Assets\Icons\01-File-and-View\02-Hover\" />
+		<Folder Include="Assets\Icons\01-File-and-View\03-Selected\" />
+		<Folder Include="Assets\Icons\02-Drawing_Tools\01-Not-Selected\" />
+		<Folder Include="Assets\Icons\02-Drawing_Tools\02-Hover\" />
+		<Folder Include="Assets\Icons\02-Drawing_Tools\03-Selected\" />
+		<Folder Include="Assets\Icons\03-Layers-and-Tags\01-Not-Selected\" />
+		<Folder Include="Assets\Icons\03-Layers-and-Tags\02-Hover\" />
+		<Folder Include="Assets\Icons\03-Layers-and-Tags\03-Selected\" />
+		<Folder Include="Assets\Icons\04-Materils-and-Blocks_Tree\01-Not-Selected\" />
+		<Folder Include="Assets\Icons\04-Materils-and-Blocks_Tree\02-Hover\" />
+		<Folder Include="Assets\Icons\04-Materils-and-Blocks_Tree\03-Selected\" />
+		<Folder Include="Assets\Icons\05-Genral-UI\01-Not-Selected\" />
+		<Folder Include="Assets\Icons\05-Genral-UI\02-Hover\" />
+		<Folder Include="Assets\Icons\05-Genral-UI\03-Selected\" />
+		<Folder Include="Assets\Icons\06-Material-and-Color_Swatches\01-Not-Selected\" />
+		<Folder Include="Assets\Icons\06-Material-and-Color_Swatches\02-Hover\" />
+		<Folder Include="Assets\Icons\06-Material-and-Color_Swatches\03-Selected\" />
+		<Folder Include="Assets\Icons\07-State Variants Demo\01-Not-Selected\" />
+		<Folder Include="Assets\Icons\07-State Variants Demo\02-Hover\" />
+		<Folder Include="Assets\Icons\07-State Variants Demo\03-Selected\" />
+		<Folder Include="Assets\Icons\1-DRAWING_TOOLS\" />
+		<Folder Include="Assets\Icons\2-FILE-VIEW\" />
+		<Folder Include="Assets\Icons\3-LAYERS-TAGS\" />
+		<Folder Include="Assets\Icons\4-MATERIALS_BLOCKS-TREE\" />
+		<Folder Include="Assets\Icons\5-GENERAL-UI\" />
+		<Folder Include="Assets\Icons\6-MATERIAL-COLOR-SWATCHES\" />
+		<Folder Include="My Project\" />
+	</ItemGroup>
+
+</Project>
